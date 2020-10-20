@@ -76,4 +76,4 @@ def send_email(message,email): #send email
     s.quit()
 
 if __name__ == '__main__':
-    app.run(debug=False, use_reloader=True, port=8000)
+    app.run(debug=False, port=8090, host="0.0.0.0")
