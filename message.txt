@@ -1,0 +1,13 @@
+Hello ${PERSON_NAME}, 
+
+We very much appreciate you for registering for the event "Prototyping As a Process".
+We expect your presence fully at the time of event 7PM - 8.30PM on 18th October. 
+
+The meeting will be through zoom app. 
+Please ensure safe network speed at the time of the meeting. 
+We are enclosing the meeting link with this mail.
+
+http://bit.ly/designHack
+
+Thankyou
+Hack Club CUCEK
