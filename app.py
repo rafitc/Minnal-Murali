@@ -66,7 +66,7 @@ def send_email(message,email): #send email
     msg.attach(MIMEText(message, 'plain'))
 
     if(os.path.isfile('img.jpeg')): 
-        img_data = open('img.jpeg', 'rb').read() #put attachment location
+        img_data = open('img.jpg', 'rb').read() #put attachment location
         image = MIMEImage(img_data, name=os.path.basename('img.jpeg'))
         msg.attach(image)
         # send the message via the server set up earlier.
