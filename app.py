@@ -57,22 +57,22 @@ def send_email(message,email): #send email
     msg = MIMEMultipart() 
 
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)
-    s.starttls()
+    s.starttls() #start session 
     s.login(MY_ADDRESS, PASSWORD)
 
     msg['From']=MY_ADDRESS
     msg['To']=email
-    msg['Subject']="Hacktoberfest invite"
+    msg['Subject']="Minnal Murali test Message!!" #Set your email Subject 
     msg.attach(MIMEText(message, 'plain'))
 
-    if(os.path.isfile('img.jpeg')): 
+    if(os.path.isfile('img.jpeg')): #adding image if available
         img_data = open('img.jpg', 'rb').read() #put attachment location
         image = MIMEImage(img_data, name=os.path.basename('img.jpeg'))
         msg.attach(image)
         # send the message via the server set up earlier.
     s.send_message(msg)
     print("sent!!")
-    del msg
+    del msg #clearing session 
     s.quit()
 
 if __name__ == '__main__':
