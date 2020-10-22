@@ -1,6 +1,6 @@
-import config
+import config #add your credentials by creating config.py in same directory. 
 import io
-import os
+import os.path
 import json
 import re
 import smtplib
@@ -12,7 +12,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 
-MY_ADDRESS = config.gmail #config sender ID
+MY_ADDRESS = config.gmail #config sender ID 
 PASSWORD = config.password #config sender Password
 
 app = Flask(__name__)
@@ -57,22 +57,23 @@ def send_email(message,email): #send email
     msg = MIMEMultipart() 
 
     s = smtplib.SMTP(host='smtp.gmail.com', port=587)
-    s.starttls()
+    s.starttls() #start session 
     s.login(MY_ADDRESS, PASSWORD)
 
     msg['From']=MY_ADDRESS
     msg['To']=email
-    msg['Subject']="Hacktoberfest invite"
+    msg['Subject']="Minnal Murali test Message!!" #Set your email Subject 
     msg.attach(MIMEText(message, 'plain'))
 
-    img_data = open('img.jpeg', 'rb').read() #put attachment location
-    image = MIMEImage(img_data, name=os.path.basename('img.jpeg'))
-    msg.attach(image)
+    if(os.path.isfile('img.jpg')): #adding image if available
+        img_data = open('img.jpg', 'rb').read() #put attachment location
+        image = MIMEImage(img_data, name=os.path.basename('img.jpeg'))
+        msg.attach(image)
         # send the message via the server set up earlier.
     s.send_message(msg)
     print("sent!!")
-    del msg
+    del msg #clearing session 
     s.quit()
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run(debug=False, port=8090, host="0.0.0.0")
