@@ -7,7 +7,7 @@ Test Bot by filling [this form](https://programmerme.typeform.com/to/l12ftsPx) :
 typeform webhook > flask app > MIMEMultipart > python smtp 
 
 message.txt : contain your custom message text. 
-If you want to add images. Add your image file with name *img.jpeg*
+If you want to add images. Add your image file with name *img.jpg*
 
 Flask modulue 
 
