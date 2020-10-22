@@ -7,10 +7,9 @@ Test this Bot by filling [this form](https://programmerme.typeform.com/to/l12fts
 ## Working 
 typeform webhook > flask app > MIMEMultipart > python smtp 
 
-message.txt : contain your custom message text. 
-If you want to add images. Add your image file with name *img.jpg*
+message.txt : contain your custom message text. Add image if you want to attach. 
 
-Procfile : For heroku deploy
+Procfile : This file is needed while deploying in heroku. 
 
 
 Flask modulue 
