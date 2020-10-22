@@ -20,3 +20,6 @@ Flask modulue
 
 
 Dont forget to *allow access to unsecure app* in gmail security settings. 
+
+
+Credits: https://www.freecodecamp.org/news/send-emails-using-code-4fcea9df63f/
