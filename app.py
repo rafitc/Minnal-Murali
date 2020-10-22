@@ -65,7 +65,7 @@ def send_email(message,email): #send email
     msg['Subject']="Minnal Murali test Message!!" #Set your email Subject 
     msg.attach(MIMEText(message, 'plain'))
 
-    if(os.path.isfile('img.jpeg')): #adding image if available
+    if(os.path.isfile('img.jpg')): #adding image if available
         img_data = open('img.jpg', 'rb').read() #put attachment location
         image = MIMEImage(img_data, name=os.path.basename('img.jpeg'))
         msg.attach(image)
