@@ -2,7 +2,7 @@
 
 Minnal Murali is a python bot to send quick reply for your typeform responses. 
 
-Test this Bot by filling [this form](https://programmerme.typeform.com/to/l12ftsPx) : 
+
 
 ## Working 
 typeform webhook > flask app > MIMEMultipart > python smtp 
